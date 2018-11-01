@@ -9,4 +9,9 @@ describe('test/http/429.test.ts', () => {
     assert(err.name === 'TooManyRequestsError');
     assert(err.status === 429);
   });
+  
+  it('should set header', () => {
+    const err = new TooManyRequestsError();
+    assert(!!error.headers);
+  });
 });
